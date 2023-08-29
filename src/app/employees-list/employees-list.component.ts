@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {ActivatedRoute,ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: 'app-employees-list',
@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./employees-list.component.css']
 })
 export class EmployeesListComponent {
+  selectedId:any;
 MyEmployees=[
   {"id":1,"name":"divya"},
   {"id":2,"name":"navya"},
@@ -15,7 +16,7 @@ MyEmployees=[
   {"id":5,"name":"prem"}
 ]
 
-constructor(private router:Router) {
+constructor(private router:Router,private route:ActivatedRoute) {
 
 }
 EmpClick(employee:any)
@@ -24,6 +25,12 @@ EmpClick(employee:any)
 }
 ngOnInit():void
 {
-
+  let id=this.route.snapshot.paramMap.get('id');
+  let name=this.route.snapshot.paramMap.get('name');
+  this.selectedId=id;
+}
+isSelected(employee:any)
+{
+return parseInt(employee.id)===parseInt(this.selectedId);
 }
 }

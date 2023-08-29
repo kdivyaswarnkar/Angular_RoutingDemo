@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-employee-details',
   templateUrl: './employee-details.component.html',
@@ -9,7 +11,7 @@ export class EmployeeDetailsComponent {
 
   public EmpId:any;
   public EmpName:any;
-constructor(private route:ActivatedRoute) {
+constructor(private route:ActivatedRoute,private router:Router) {
 }
 ngOnInit() :void
 {
@@ -17,5 +19,10 @@ ngOnInit() :void
  let name=this.route.snapshot.paramMap.get('name');
  this.EmpId=id;
  this.EmpName=name;
+}
+gotoEmployees()
+{
+  let selectedId=this.EmpId;
+  this.router.navigate(['/employees',{id:selectedId}])
 }
 }
