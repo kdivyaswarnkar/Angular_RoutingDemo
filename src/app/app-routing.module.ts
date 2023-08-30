@@ -6,10 +6,21 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EmployeesListComponent } from './employees-list/employees-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { ProductsComponent } from './products/products.component';
+import { TshirtsComponent } from './tshirts/tshirts.component';
+import { TrousersComponent } from './trousers/trousers.component';
 
 const routes: Routes = [
 {path:'',redirectTo:'/home',pathMatch:'full'},
 {path:'home',component:HomeComponent},
+{
+  path:'products',
+  component:ProductsComponent,
+  children:[
+    {path:'tshirts',component:TshirtsComponent},
+    {path:'trousers',component:TrousersComponent}
+  ]
+},
 {path:'about',component:AboutComponent},
 {path:'contact',component:ContactComponent},
 {path:'employees',component:EmployeesListComponent},
