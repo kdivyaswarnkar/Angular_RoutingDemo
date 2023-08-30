@@ -12,6 +12,9 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { ProductsComponent } from './products/products.component';
 import { TshirtsComponent } from './tshirts/tshirts.component';
 import { TrousersComponent } from './trousers/trousers.component';
+import { CoursesComponent } from './courses/courses.component';
+import { CoursesDetailsComponent } from './courses-details/courses-details.component';
+import { CoursesDetails2Component } from './courses-details2/courses-details2.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { TrousersComponent } from './trousers/trousers.component';
     EmployeeDetailsComponent,
     ProductsComponent,
     TshirtsComponent,
-    TrousersComponent
+    TrousersComponent,
+    CoursesComponent,
+    CoursesDetailsComponent,
+    CoursesDetails2Component
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,9 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { ProductsComponent } from './products/products.component';
 import { TshirtsComponent } from './tshirts/tshirts.component';
 import { TrousersComponent } from './trousers/trousers.component';
+import { CoursesComponent } from './courses/courses.component';
+import { CoursesDetailsComponent } from './courses-details/courses-details.component';
+import { CoursesDetails2Component } from './courses-details2/courses-details2.component';
 
 const routes: Routes = [
 {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -23,6 +26,19 @@ const routes: Routes = [
 },
 {path:'about',component:AboutComponent},
 {path:'contact',component:ContactComponent},
+{path:'courses',component:CoursesComponent},
+
+{
+  path:'coursesDetails',
+  outlet:'courses-details',
+  component:CoursesDetailsComponent
+},
+{
+  path:'coursesDetails2',
+  outlet:'courses-details2',
+  component:CoursesDetails2Component
+},
+
 {path:'employees',component:EmployeesListComponent},
 {path:'employees/:id',component:EmployeeDetailsComponent},
 // {path:'employees/:id/:name',component:EmployeeDetailsComponent},
