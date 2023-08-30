@@ -2,7 +2,13 @@
 
 <h2>You have selected employee with id ={{EmpId}}</h2>
 
-<h2>You have selected employee with name ={{EmpName}}</h2>
+<!-- <h2>You have selected employee with name ={{EmpName}}</h2> -->
+
+<a (click)="PreviousEmp()">Previous</a>
+&nbsp;
+<a (click)="NextEmp()">Next</a>
+
+<br/>
 
 <button class="btn btn-primary" (click)="gotoEmployees()">back</button>
 

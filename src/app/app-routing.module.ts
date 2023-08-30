@@ -13,7 +13,8 @@ const routes: Routes = [
 {path:'about',component:AboutComponent},
 {path:'contact',component:ContactComponent},
 {path:'employees',component:EmployeesListComponent},
-{path:'employees/:id/:name',component:EmployeeDetailsComponent},
+{path:'employees/:id',component:EmployeeDetailsComponent},
+// {path:'employees/:id/:name',component:EmployeeDetailsComponent},
 {path:'**',component:PageNotFoundComponent}
 ];
 

@@ -21,12 +21,13 @@ constructor(private router:Router,private route:ActivatedRoute) {
 }
 EmpClick(employee:any)
 {
-   this.router.navigate(['/employees',employee.id,employee.name]);
+   this.router.navigate(['/employees',employee.id]);
+  // this.router.navigate(['/employees',employee.id,employee.name]);
 }
 ngOnInit():void
 {
   let id=this.route.snapshot.paramMap.get('id');
-  let name=this.route.snapshot.paramMap.get('name');
+  // let name=this.route.snapshot.paramMap.get('name');
   this.selectedId=id;
 }
 isSelected(employee:any)
